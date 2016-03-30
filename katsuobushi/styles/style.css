@@ -1,0 +1,50 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html, body, article{
+    width: 100%;
+    height:100%;
+}
+.top-corner-radial header, .top-corner-radial footer{
+    height: 5%
+}
+.top-corner-radial div{
+    display: inline-block;
+}
+.top-corner-radial div.span-1{
+    width: 33%;
+    height: 45%;
+}
+.top-corner-radial div.span-2{
+    width: 66%;
+    height: 45%;
+}
+.top-corner-radial div.span-3{
+    width: 99%;
+    height: 45%;
+}
+.variance-to-goal header{
+    text-align: center;
+    height: 10%;
+}
+.variance-to-goal main{
+    height: 90%;
+}
+.variance-to-goal ol{
+    height: 100%;
+}
+.variance-to-goal li{
+    display: inline-block;
+    width: 49%;
+    text-align: center;
+    height: 30%;
+}
+.variance-to-goal li:first-child{
+    width:100%;
+    height: 70%;
+}
+article aside{
+    display: none;
+}

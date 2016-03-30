@@ -19,5 +19,6 @@ var sampleWidgetDataJSON = {
     widgetID: 1,
     widgetData: [36, 257, 293],
     widgetUnits: 'units',
-    widgetTitle: 'Widget Sales'
+    widgetTitle: 'Widget Sales',
+    widgetDescription: '<p>Shows variance to goal for the latest week of the year in units sold</p>'
 }
