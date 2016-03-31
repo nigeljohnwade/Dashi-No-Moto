@@ -1,31 +1,56 @@
+/*minimal reset*/
+
 *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
+
+/*container settings*/
+html{
+    font-size: 16px;
+}
 html, body, article{
     width: 100%;
     height:100%;
 }
+main{
+    height: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    align-content: stretch;
+}
+/*layout settings*/
 .top-corner-radial header, .top-corner-radial footer{
-    height: 5%
+    height: 5%;
+    width: 100%
 }
 .top-corner-radial div{
     float: left;
     border: 1px solid #333344;
 }
+.top-corner-radial div{
+    flex-basis: 300px;
+}
 .top-corner-radial div.span-1{
-    width: 33.333%;
-    height: 45%;
+    flex-basis: 300px;
+    flex-grow: 1;
 }
 .top-corner-radial div.span-2{
-    width: 66.666%;
-    height: 45%;
+    flex-basis: 600px;
+    flex-grow: 2;
 }
 .top-corner-radial div.span-3{
-    width: 99.999%;
-    height: 45%;
+    flex-basis: 900px;
+    flex-grow: 3;
 }
+.top-corner-radial div.span-all{
+    flex-basis: 100%;
+    flex-grow: 1;
+}
+/*widget settings*/
 .variance-to-goal header{
     text-align: center;
     height: 10%;
@@ -46,6 +71,12 @@ html, body, article{
 .variance-to-goal li:first-child{
     width:100%;
     height: 70%;
+}
+.variance-to-goal li:first-child p{
+    font-size: 5em;
+}
+.variance-to-goal li:first-child h3{
+    font-size: 2em;
 }
 article aside{
     display: none;
