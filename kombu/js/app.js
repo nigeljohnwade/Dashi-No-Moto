@@ -21,6 +21,5 @@ var brandColors = [
 ]
 
 var colors = brewerColors;
-
+drawColumnChart(data, "app-columnChart", "#line-chart-widget-1");
 drawColumnChart(data, "app-columnChart", "#column-chart-widget-1");
-drawColumnChart(data, "app-columnChart", "#column-chart-widget-2");

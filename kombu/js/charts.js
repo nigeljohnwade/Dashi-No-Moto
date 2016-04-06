@@ -1,12 +1,12 @@
 function drawColumnChart(data, target, container){
     var width = document.querySelector(container).clientWidth,
-        height = document.querySelector(container).clientHeight - document.querySelector(container + " header").clientHeight;
+        height = document.querySelector(container).clientHeight/* - document.querySelector(container + " header").clientHeight*/;
 
     var y = d3.scale.linear()
         .range([height, 0]);
     y.domain([0, d3.max(data)]);
 
-    var containerSelection = d3.select(container + " main");
+    var containerSelection = d3.select(container);
 
     var chart = containerSelection.append("svg")
         .attr("width", width)

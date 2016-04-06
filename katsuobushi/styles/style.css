@@ -84,3 +84,6 @@ body > main{
 article aside{
     display: none;
 }
+svg{
+    position:absolute;
+}
