@@ -21,5 +21,19 @@ var brandColors = [
 ]
 
 var colors = brewerColors;
-drawColumnChart(data, "app-columnChart", "#line-chart-widget-1");
+var lineData = [];
+for(var i = 0 ; i < colors.length ; i++){
+    lineData.push(shuffleArray(data));
+} 
+drawLineChart(lineData, "app-lineChart", "#line-chart-widget-1");
 drawColumnChart(data, "app-columnChart", "#column-chart-widget-1");
+
+function shuffleArray(arrayToShuffle){
+    var _tempArray = arrayToShuffle.slice(0),
+        _returnArray = [];
+    for (var i = 0 ; _tempArray.length > 0 ; i++){
+        _elemNumber = Math.floor(Math.random() * _tempArray.length);
+        _returnArray[i] = _tempArray.splice(_elemNumber,1)[0];
+    }
+    return _returnArray;
+}

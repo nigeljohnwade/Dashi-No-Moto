@@ -35,22 +35,26 @@ function drawColumnChart(data, target, container){
             }
         );
 }       
-function drawLineChart(data){
-    var width = 960,
-        height = 500;
+function drawLineChart(data, target, container){
+    var width = document.querySelector(container).clientWidth,
+        height = document.querySelector(container).clientHeight/* - document.querySelector(container + " header").clientHeight*/;
 
     var y = d3.scale.linear()
         .range([height, 0]);
     var x = d3.scale.linear()
         .range([0, width]);
         
-    var chart = d3.select("svg.line-chart")
+    var containerSelection = d3.select(container);
+
+    var chart = containerSelection.append("svg")
         .attr("width", width)
         .attr("height", height)
-        .html("");
+        .html("")
+        .attr("class", target);
         
     y.domain([0, d3.max(data[0])]);
-    x.domain([0, data[0].length])
+    x.domain([0, data[0].length]);
+
     var line = d3.svg.line()
         .interpolate("basis")
         .x(function(d, i) {
